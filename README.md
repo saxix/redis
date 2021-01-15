@@ -33,7 +33,7 @@ display:
     $ docker run --name some-redis -d saxix/redis
 
 #### start with persistent storage
-    $ docker run --name some-redis -d redis redis-server --appendonly yes
+    $ docker run --name some-redis -e REDIS_appendonly=yes -d redis 
 
 If persistence is enabled, data is stored in the `VOLUME /data`, which can be used with --volumes-from some-volume-container or -v /docker/host/dir:/data (see docs.docker volumes).
 
